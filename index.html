@@ -2,35 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/e05c7fc31c.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <img id="logo" src="poke_ball.jpeg" alt="pokemon-logo">
-        <a  id="logo_name"><h1>Pokedex</h1></a>
+    <h1 id="Pokedex">Pokedex</h1>
+
+    <div class="buttons">
+        <input type="text" id="search" placeholder="Enter Pokemon Name... ">
+        <button id="search_button">Search</button>
+        <button id="seen_button">Seen Pokemons</button>
+        <button id="unseen_button">Unseen Pokemons</button>
     </div>
-    <div class="search-bar">
-        <input type="text" id="search" placeholder="Pokemon name">
-        <button id="search_btn">Search</button>
-    </div> 
-    <ul class="navitem">
-        <a href="./index.html"><li>Home</li></a>
-        <li>Favourite</li>
-        <li>Seen</li>
-        <li>Not Seen</li>
-    </ul>
-    <div class="pokemon_info">
-        <h2 id="pokemon_name"></h2>
-        <!-- <img id="pokemon_image" src="" alt="Pokemon Image"> -->
-        <ul id="pokemon_types"></ul> 
-    </div>
-    <div id="pokemon_list"></div>
-    <!-- using the test.js -->
-    <script src="./javascript_code.js"></script> 
-</body> 
+
+    <div class="pokemon-container" id="pokemon_list"></div>
+    <div class="details"></div>
+
+    <script src="javascript_code.js"></script>
+</body>
 </html>
-
-
