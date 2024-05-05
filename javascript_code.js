@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-// Event listener for scroll to bottom
-window.addEventListener('scroll', async () => {
+// Event listener for scroll to bottom as the user scrolls down the page it fetches more pokemons 
+window.addEventListener('scroll', async () => { // Event listener for scroll to bottom 
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         // Fetch and display the next 10 Pokémons
         await fetchAndDisplayPokemon(seenPokemon.size, 10);

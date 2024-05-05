@@ -1,18 +1,29 @@
-body h1 {
+
+/* this code adds hovering effect on the each pokemons */
+.pokemon:hover {
+    background-color: #d0f2e0; 
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+  } */
+  
+  body h1 {
     font-family: cursive;
     font-size: 40px;
     text-align: center;
 }
+
 body {
     background-color: rgba(222, 223, 223, 0.352);
 }
+
 .buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-
 }
+
 .pokemon-container {
     display: flex;
     flex-wrap: wrap;
@@ -35,11 +46,24 @@ body {
     height: auto;
 }
 
-/* this code adds hovering effect on the each pokemons */
-.pokemon:hover {
-    background-color: #d0f2e0; 
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .pokemon {
+        width: 150px; /* Adjust width for smaller screens */
+    }
+
+   .pokemon img {
+        max-width: 80px; /* Adjust image size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+   .pokemon {
+        width: 100%; /* Make pokemon cards stack vertically on very small screens */
+        margin-bottom: 20px; /* Add some space between stacked cards */
+    }
+
+   .pokemon img {
+        max-width: 100%; /* Make images take full width of the card */
+    }
+}
